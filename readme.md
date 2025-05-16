@@ -10,8 +10,10 @@ ouvertes et une recherche sémantique via RAG (Retrieval-Augmented Generation).
 Projet/
 │
 ├── main.py                      # 🎯 Interface principale avec Streamlit (chatbot utilisateur)
+├
 ├── indexer.py                   # 🛠️ Script d’indexation initiale des documents (pipeline RAG)
 │
+
 ├── core/                        # 🔁 Composants cœur du système RAG
 │   ├── chatbot.py               # Appel principal au moteur RAG (ask_bot)
 │   └── rag_pipeline.py          # Pipeline : extraction → embedding → FAISS index
