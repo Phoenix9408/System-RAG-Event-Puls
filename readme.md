@@ -7,25 +7,27 @@ ouvertes et une recherche sémantique via RAG (Retrieval-Augmented Generation).
 
 ---
 
-## 🗂️ Structure du projet
-
 Projet/
 │
-├── main.py # Entrée principale de l'application (Streamlit)
-├── indexer.py # Script pour indexer les documents (FAISS)
-├── core/
-│ ├── chatbot.py # Moteur du bot (RAG)
-│ ├── rag_pipeline.py # Pipeline complet : data → embeddings → index
-├── utils/
-│ ├── config.py # Chargement des paramètres
-│ ├── vector_store.py # Stockage vectoriel et mémoire conversationnelle
-│ ├── data_loader.py # Chargement et transformation des événements
-│ ├── database.py # Sauvegarde du feedback utilisateur
-│ ├── logging_config.py # Configuration du logging
+├── main.py                      # 🎯 Interface principale avec Streamlit (chatbot utilisateur)
+├── indexer.py                   # 🛠️ Script d’indexation initiale des documents (pipeline RAG)
 │
-├── tests/ # Dossier de tests automatisés
-├── requirements.txt # Dépendances du projet
-├── .env # Variables d’environnement (clé API Mistral
+├── core/                        # 🔁 Composants cœur du système RAG
+│   ├── chatbot.py               # Appel principal au moteur RAG (ask_bot)
+│   └── rag_pipeline.py          # Pipeline : extraction → embedding → FAISS index
+│
+├── utils/                       # 🔧 Outils techniques & services
+│   ├── config.py                # Paramétrage centralisé (API clés, chemins...)
+│   ├── vector_store.py          # Intégration FAISS, recherche sémantique & mémoire
+│   ├── data_loader.py           # Chargement, nettoyage et transformation des événements
+│   ├── database.py              # Gestion du stockage de feedback utilisateur
+│   └── logging_config.py        # Configuration du système de logs (optionnel)
+│
+├── tests/                       # ✅ Scripts de test unitaire (extraction, transformation, indexation)
+│
+├── requirements.txt             # 📦 Liste des dépendances du projet
+├── .env                         # 🔐 Fichier d’environnement (non versionné) avec clé API Mistral
+└── README.md                    # 📘 Documentation du projet
 
 
 ---
